@@ -24,10 +24,6 @@ def event_test(body, say):
     else:
         say("Hello <@" + user_id + ">!")
 
-@app.event("message")
-def handle_message_events(body, logger):
-    logger.info(body)
-
 # Starts app
 if __name__ == "__main__":
     app.start(port=int(os.environ.get("PORT", 3000)))
